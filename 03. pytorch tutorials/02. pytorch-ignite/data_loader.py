@@ -47,7 +47,7 @@ def load_mnist(is_train=True, flatten=True):
 def get_loaders(config):
     x, y = load_mnist(is_train=True, flatten=False)
 
-    train_cnt = int(x.size(0) * config.train_ratio)
+    train_cnt = int(x.size(0) * config.train_ratio # |x| = (60000,28,28)
     valid_cnt = x.size(0) - train_cnt
 
     # Shuffle dataset to split into train/valid set.
