@@ -59,7 +59,7 @@ class MyEngine(Engine):
         else:
             accuracy = 0
 
-        p_norm = float(get_parameter_norm(engine.model.parameters())) # Parameter goes bigger as train is process
+        p_norm = float(get_parameter_norm(engine.model.parameters()))
         g_norm = float(get_grad_norm(engine.model.parameters()))
 
         # Take a step of gradient descent.
